@@ -1,24 +1,37 @@
 {
-	"name": "carsxe-remote-mcp-server",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {
-		"deploy": "wrangler deploy",
-		"dev": "wrangler dev",
-		"format": "biome format --write",
-		"lint:fix": "biome lint --fix",
-		"start": "wrangler dev",
-		"cf-typegen": "wrangler types",
-		"type-check": "tsc --noEmit"
-	},
-	"dependencies": {
-		"@modelcontextprotocol/sdk": "1.13.1",
-		"agents": "^0.0.100",
-		"zod": "^3.25.67"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^2.0.6",
-		"typescript": "^5.8.3",
-		"wrangler": "^4.22.0"
-	}
+  "name": "carsxe-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "carsxe": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carsxe/carsxe-mcp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carsxe/carsxe-mcp/issues"
+  },
+  "homepage": "https://github.com/carsxe/carsxe-mcp#readme",
+  "dependencies": {
+    "@anthropic-ai/claude-code": "^1.0.40",
+    "@modelcontextprotocol/sdk": "^1.15.0",
+    "dotenv": "^17.0.1",
+    "zod": "^3.25.74"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "typescript": "^5.8.3"
+  }
 }
